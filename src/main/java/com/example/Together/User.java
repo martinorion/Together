@@ -44,21 +44,27 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+    public  User(){}
 
-    public User(){}
-
-    public User(String name, String email){
-        this.email = email;
+    public User(long id, String name, String email){
+        this.id = id;
         this.name = name;
+        this.email = email;
 
     }
 
-    @Override
+    public User( String name, String email){
+        this.name = name;
+        this.email = email;
+
+    }
+
+ /*   @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
-    }
+    }*/
 }

@@ -13,7 +13,7 @@ public class TogetherApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TogetherApplication.class, args);
 	}
-	@Bean
+/*	@Bean
 	CommandLineRunner init(UserRepository userRepository) {
 		return args -> {
 			Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
@@ -23,4 +23,6 @@ public class TogetherApplication {
 			userRepository.findAll().forEach(System.out::println);
 		};
 	}
+
+*/
 }
