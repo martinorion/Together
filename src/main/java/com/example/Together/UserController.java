@@ -20,18 +20,21 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> getUsers() {
-        User user = new User("fdf", "fdff");
+       /* User user = new User("fdf", "fdff");
         User user1 = new User("fdf", "fdff");
         User user2 = new User("fdf", "fdff");
         List<User> users = Arrays.asList(user ,user1, user2);
         userService.saveUser(user);
         userService.saveUser(user1);
         userService.saveUser(user2);
-        return users;
+        return users;*/
+
+        return (List<User>) userRepository.findAll();
     }
 
     @PostMapping("/users")
     void addUser(@RequestBody User user) {
-        userRepository.save(user);
+        //userRepository.save(user);
+        userService.saveUser(user);
     }
 }
